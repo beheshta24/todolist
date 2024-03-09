@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 mongoose.connect('mongodb://192.168.178.38:27017/TodoListDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true
