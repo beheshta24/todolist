@@ -9,7 +9,7 @@
     "dev": "nodemon backend"
   },
   "keywords": [],
-  "author": "",
+  "author": "B.Rahsepar",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
