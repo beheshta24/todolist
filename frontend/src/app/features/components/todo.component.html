@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<!-- Todo List Display -->
+<ul>
+  <li *ngFor="let todo of todos">
+    <p-checkbox [label]="todo.title" [(ngModel)]="todo.isCompleted" [binary]="true" (onChange)="toggleTodoComplete(todo)"></p-checkbox>
+    <button pButton icon="pi pi-times" class="p-button-rounded p-button-danger p-button-outlined" (click)="removeTodo(todo)"></button>
+  </li>
+</ul>
 
-</body>
-</html>
+<!-- Form to Add New Todo -->
+<div class="p-fluid">
+  <div class="p-field">
+    <label for="todoTitle">Todo</label>
+    <input id="todoTitle" type="text" pInputText [(ngModel)]="newTodo.title" placeholder="Enter todo">
+  </div>
+  <button pButton type="button" label="Add" (click)="addTodo()"></button>
+</div>
+
+<!-- Error Message Display -->
+<div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
