@@ -4,9 +4,10 @@ import { TodoService } from '../services/todo.service';
 import { Todo } from '../models/todo.model';
 
 @Component({
-  selector: 'app-todo',
+  selector: 'app-todo ',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.scss'],
+
 })
 export class TodoComponent implements OnInit, OnDestroy {
   todos: Todo[] = [];

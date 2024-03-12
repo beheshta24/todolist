@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {AppComponent} from "./app.component";
-import {FormsModule} from "@angular/forms";
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {TodoComponent} from "./features/components/todo.component";
+import { AppComponent } from './app.component';
+import { TodoComponent } from './features/components/todo.component';
+import { TagModule } from 'primeng/tag';
 import { SidebarModule } from 'primeng/sidebar';
-import { ListboxModule } from 'primeng/listbox';
-import { CalendarModule } from 'primeng/calendar';
-import { DropdownModule } from 'primeng/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
-  declarations: [AppComponent,TodoComponent],
+  declarations: [AppComponent, TodoComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -22,15 +21,11 @@ import { DropdownModule } from 'primeng/dropdown';
     CheckboxModule,
     InputTextModule,
     ButtonModule,
-    BrowserAnimationsModule,
+    TagModule,
     SidebarModule,
-    ListboxModule,
-    CalendarModule,
-    DropdownModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
-
-
 })
 export class AppModule { }
