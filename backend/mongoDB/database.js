@@ -1,15 +1,18 @@
+require('dotenv').config({ path: '../.env' });
+
+
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://192.168.178.38:27017/TodoListDB', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+const user = encodeURIComponent(process.env.DB_USER);
+const password = encodeURIComponent(process.env.DB_PASS);
+const host = process.env.DB_HOST;
+const dbName = process.env.DB_NAME;
 
-const db = mongoose.connection;
+const connectionString = `mongodb+srv://${user}:${password}@${host}/${dbName}?retryWrites=true&w=majority&authSource=admin&tls=true`;
 
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', function() {
+
+mongoose.connect(connectionString).then(() => {
     console.log("Connected to MongoDB successfully!");
+}).catch(err => {
+    console.error("MongoDB connection error:", err);
 });
-
-module.exports = db;
