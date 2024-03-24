@@ -29,3 +29,9 @@ Backend setup:
 cd backend
 npm install
 ```
+Frontend setup:
+
+```bash
+cd frontend
+npm install
+```
