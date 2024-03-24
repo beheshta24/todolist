@@ -8,7 +8,7 @@ This project is a Todo List application built with Angular for the frontend and 
 - Mark tasks as completed
 - Delete tasks
 - Filter tasks by completion status
-
+<img width="531" alt="webapp" src="https://github.com/beheshta24/todolist/assets/152727908/2662ad91-216b-4188-8154-a4b88b6481f0">
 
 ## Prerequisites
 
